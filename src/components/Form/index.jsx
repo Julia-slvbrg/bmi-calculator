@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
+import styles from './Form.module.css'
 
 const Form = ({ setBmi }) => {
 
@@ -25,13 +26,16 @@ const Form = ({ setBmi }) => {
 
         setBmi(commaBmi);
     };
-
+    
     return(
         <>
-            <form onSubmit={onSubmit}>
-                <div>
-                    <label>Altura (m):</label>
-                    <input 
+            <form 
+                onSubmit={onSubmit}
+                className={styles.formContainer}
+            >
+                <div className={styles.formContainer__field}>
+                    <label className={styles.formContainer__field__label}>Altura (m):</label>
+                    <input className={styles.formContainer__field__input} 
                         type='number' 
                         required 
                         value={heightInput}
@@ -41,9 +45,9 @@ const Form = ({ setBmi }) => {
                     
                 </div>
                 
-                <div>
-                    <label>Peso (kg):</label>
-                    <input 
+                <div className={styles.formContainer__field}>
+                    <label className={styles.formContainer__field__label}>Peso (kg):</label>
+                    <input className={styles.formContainer__field__input} 
                         type='number' 
                         required 
                         value={weightInput}
@@ -51,7 +55,10 @@ const Form = ({ setBmi }) => {
                         placeholder='ex.: 55,300'
                     />
                 </div>
-                <button type="submit">Medir IMC</button>
+                <button 
+                    type="submit"
+                    className={styles.formContainer__btn}
+                >Medir IMC</button>
             </form>
         </>
     )
