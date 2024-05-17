@@ -9,4 +9,22 @@
     background: linear-gradient(201deg, #341f97, #10ac84);
     background-repeat: no-repeat;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+h1, p{
+    font-size: 56px;
+    font-family: "Rubik", sans-serif;
+    font-weight: bold;
+    color: var(--ternaryColor);
+}
+
+:root{
+    --primaryColor: #222f3e;
+    --secondaryColor: #8395a7;
+    --ternaryColor:  #c8d6e5;
 }
