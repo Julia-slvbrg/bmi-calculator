@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Form from './components/Form';
+import Result from './components/Result';
 
 function App() {
   const [bmi, setBmi] = useState();
@@ -15,9 +16,7 @@ function App() {
         setBmi={setBmi}
       />
 
-      {bmi && (
-        <p>{bmi} kg/m²</p>
-      )}
+      {bmi && <Result bmi={bmi} />}
     </div>
   )
 }

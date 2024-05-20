@@ -22,9 +22,7 @@ const Form = ({ setBmi }) => {
 
         const calcBmi = (castingWeight / (castingHeight * castingHeight)).toFixed(2);
 
-        const commaBmi = calcBmi.replace('.', ',');
-
-        setBmi(commaBmi);
+        setBmi(calcBmi)
     };
     
     return(
@@ -64,7 +62,7 @@ const Form = ({ setBmi }) => {
     )
 };
 
-Form.propTypes= {     
+Form.propTypes = {     
     setBmi: PropTypes.func.isRequired
 };
 

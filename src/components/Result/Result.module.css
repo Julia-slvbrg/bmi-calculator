@@ -1,0 +1,20 @@
+.resultContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 52px;
+}
+
+.text__warning{
+    color: pink;
+}
+.text__danger{
+    color: red;
+}
+.text__good{
+    color: rgba(7, 97, 7, 0.938);
+   
+}
+
